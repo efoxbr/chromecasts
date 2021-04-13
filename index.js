@@ -167,7 +167,7 @@ module.exports = function () {
       if (!cb) cb = noop
       connect(function (err, p) {
         if (err) return cb(err)
-        p.play()
+        p.play(cb)
       })
     }
 
@@ -279,7 +279,6 @@ module.exports = function () {
           function (err, service) {
             if (err) return
             if (!service.device) return
-            if (service.device.manufacturer !== 'Google Inc.') return
 
             debug('device %j', service.device)
 
