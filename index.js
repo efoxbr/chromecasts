@@ -218,6 +218,18 @@ module.exports = function () {
       })
     }
 
+    player.playbackRate = function (rate, cb) {
+      if (!cb) cb = noop
+      connect(function (err, p) {
+        if (err) return cb(err)
+
+        player.request({
+          type: 'SET_PLAYBACK_RATE',
+          volume: { playbackRate: rate }
+        }, cb)
+      })
+    }
+
     player.request = function (data, cb) {
       if (!cb) cb = noop
       connect(function (err, p) {
