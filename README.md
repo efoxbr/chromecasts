@@ -2,9 +2,8 @@
 
 Query your local network for Chromecasts and have them play media
 
-```
-npm install chromecasts
-```
+Fork used on [Megacubo](https://github.com/efoxbr/megacubo) project.
+
 
 ## Usage
 
